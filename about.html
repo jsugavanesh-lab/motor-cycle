@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTO | About Us</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.7), rgba(29, 53, 87, 0.7)), url('images/about.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .vision-section {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .stat-circle {
+            width: 150px;
+            height: 150px;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">M</div>
+            <span>MOTO</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <div class="container">
+            <h1>Our Legacy, Your Journey</h1>
+            <p>Driven by passion, engineered for excellence since 2011.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Our Story -->
+        <section class="section container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Our Story</h2>
+                    <p>MOTO began in a small garage with one goal: to provide riders with a level of service and community that matches the thrill of the ride itself. What started as a local workshop has grown into the region's premier motorcycle platform.</p>
+                    <p style="margin-top: 1rem;">We believe a motorcycle isn't just a machine; it's an extension of the rider. That's why we treat every bike like our own and every client like family.</p>
+                </div>
+                <div>
+                    <img src="images/about.png" alt="Restored Motorcycle" style="border-radius: 8px; box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Values -->
+        <section class="section vision-section">
+            <div class="container" style="text-align: center;">
+                <h2 style="margin-bottom: 4rem;">Our Core Values</h2>
+                <div class="grid grid-3">
+                    <div>
+                        <div class="stat-circle">
+                            <span style="font-size: 2rem; font-weight: 700;">100%</span>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Transparent pricing and honest advice, always.</p>
+                    </div>
+                    <div>
+                        <div class="stat-circle">
+                            <span style="font-size: 2rem; font-weight: 700;">Elite</span>
+                        </div>
+                        <h3>Quality</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Only the finest parts and most skilled hands.</p>
+                    </div>
+                    <div>
+                        <div class="stat-circle">
+                            <span style="font-size: 2rem; font-weight: 700;">Global</span>
+                        </div>
+                        <h3>Community</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Building a brotherhood of riders worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section team-section">
+            <div class="container">
+                <h2 class="team-title">The Minds Behind MOTO</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <img src="images/rider3.png" alt="James Reed">
+                        </div>
+                        <h4>James Reed</h4>
+                        <p>Founder & Head Mechanic</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <img src="images/rider2.png" alt="Sarah Chen">
+                        </div>
+                        <h4>Sarah Chen</h4>
+                        <p>Operations Lead</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <img src="images/rider1.png" alt="Leo Russo">
+                        </div>
+                        <h4>Leo Russo</h4>
+                        <p>custom Build Expert</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <img src="images/elena_volt.png" alt="Elena Volt">
+                        </div>
+                        <h4>Elena Volt</h4>
+                        <p>Customer Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 1.5rem; color: white;">
+                    <div class="logo-icon" style="background-color: var(--primary);">M</div>
+                    <span>MOTO</span>
+                </div>
+                <p>The ultimate destination for motorcycle enthusiasts. Premium services, expert advice, and a community of riders who share your passion.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Stay Tuned</h3>
+                <p>Subscribe to our newsletter for the latest racing news and exclusive events.</p>
+                <div class="footer-newsletter">
+                    <form>
+                        <input type="email" placeholder="Your Rider Email" required>
+                        <button type="submit" class="btn btn-primary">Go</button>
+                    </form>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">FB</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">IG</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MotorCycle Portal. All rights reserved. Ride safe.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

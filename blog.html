@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorCycle Portal | Blog</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .blog-posts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-content: start;
+        }
+        .blog-post {
+            margin-bottom: 0;
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 8px;
+            background: var(--bg-white);
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-post img {
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .sidebar-section {
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            background: var(--bg-soft);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        .sidebar-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.2rem;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+        }
+        .recent-articles ul li {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        .recent-articles a:hover {
+            color: var(--primary);
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .tag {
+            background: var(--bg-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .tag:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .social-links-sidebar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: var(--bg-light);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: transform 0.2s ease;
+        }
+        .social-item:hover {
+            transform: translateX(5px);
+            color: var(--primary);
+        }
+        
+        @media (max-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                order: -1; /* Place sidebar above blog posts on mobile/tablet */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">M</div>
+            <span>MOTO</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="section" style="background-color: var(--secondary); color: white; text-align: center; padding: 2rem 0;">
+        <div class="container">
+            <h1 style="margin-bottom: 0.5rem;">Rider's Journal</h1>
+            <p>Gear, guides, and road stories.</p>
+        </div>
+    </header>
+
+    <main class="container blog-layout">
+        <!-- Sidebar (Above content on mobile) -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Search</h3>
+                <input type="text" class="search-bar" placeholder="Search...">
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Newsletter</h3>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;">Get the latest updates delivered to your inbox.</p>
+                <form style="display: flex; gap: 0.5rem;">
+                    <input type="email" placeholder="Email" class="search-bar" style="margin-bottom: 0;">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Go</button>
+                </form>
+            </div>
+
+            <div class="sidebar-section recent-articles">
+                <h3>Trending Now</h3>
+                <ul style="font-size: 0.9rem;">
+                    <li><a href="#">Top 5 Coastal Rides</a></li>
+                    <li><a href="#">Maintaining Your Chain</a></li>
+                    <li><a href="#">Winter Storage Tips</a></li>
+                    <li><a href="#">New Helmet Tech 2026</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Categories</h3>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                    <li style="margin-bottom: 0.4rem;"><a href="#" style="color: var(--text-dark); display: flex; justify-content: space-between;"><span>Adventure</span> <small>(12)</small></a></li>
+                    <li style="margin-bottom: 0.4rem;"><a href="#" style="color: var(--text-dark); display: flex; justify-content: space-between;"><span>Safety</span> <small>(8)</small></a></li>
+                    <li style="margin-bottom: 0.4rem;"><a href="#" style="color: var(--text-dark); display: flex; justify-content: space-between;"><span>Maintenance</span> <small>(15)</small></a></li>
+                    <li style="margin-bottom: 0.4rem;"><a href="#" style="color: var(--text-dark); display: flex; justify-content: space-between;"><span>Reviews</span> <small>(22)</small></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Popular Tags</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">Touring</a>
+                    <a href="#" class="tag">Helmets</a>
+                    <a href="#" class="tag">Vintage</a>
+                    <a href="#" class="tag">Speed</a>
+                    <a href="#" class="tag">Community</a>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Connect</h3>
+                <div class="social-links-sidebar">
+                    <a href="#" class="social-item" style="font-size: 0.8rem;">FB</a>
+                    <a href="#" class="social-item" style="font-size: 0.8rem;">IG</a>
+                    <a href="#" class="social-item" style="font-size: 0.8rem;">TW</a>
+                    <a href="#" class="social-item" style="font-size: 0.8rem;">YT</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Blog Posts -->
+        <div class="blog-posts">
+            <article class="blog-post">
+                <img src="images/road.png" alt="Road Trip">
+                <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 15, 2026 | Adventure</div>
+                <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Mountain Pass Guide</h2>
+                <p style="font-size: 0.9rem; flex-grow: 1;">Explore the best high-altitude passes and how to prepare your bike for the climb...</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <img src="images/hero_final.png" alt="Riding in Rain">
+                <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 12, 2026 | Safety</div>
+                <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Riding in the Rain</h2>
+                <p style="font-size: 0.9rem; flex-grow: 1;">Expert tips for staying safe and dry when the heavens open up on your journey...</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <img src="images/gear.png" alt="Motorcycle Gear">
+                <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 10, 2026 | Reviews</div>
+                <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Helmet Materials</h2>
+                <p style="font-size: 0.9rem; flex-grow: 1;">Carbon Fiber vs. Polycarbonate: deep dive into safety ratings for your next lid...</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <img src="images/hero.png" alt="New Cruisers">
+                <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 5, 2026 | Reviews</div>
+                <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Best 2026 Cruisers</h2>
+                <p style="font-size: 0.9rem; flex-grow: 1;">Comfort meets style in our latest roundup of the top cruisers hitting the market...</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 1.5rem; color: white;">
+                    <div class="logo-icon" style="background-color: var(--primary);">M</div>
+                    <span>MOTO</span>
+                </div>
+                <p>The ultimate destination for motorcycle enthusiasts. Premium services, expert advice, and a community of riders who share your passion.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Stay Tuned</h3>
+                <p>Subscribe to our newsletter for the latest racing news and exclusive events.</p>
+                <div class="footer-newsletter">
+                    <form>
+                        <input type="email" placeholder="Your Rider Email" required>
+                        <button type="submit" class="btn btn-primary">Go</button>
+                    </form>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">FB</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">IG</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MotorCycle Portal. All rights reserved. Ride safe.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

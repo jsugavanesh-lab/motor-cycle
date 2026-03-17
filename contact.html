@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorCycle Portal | Contact</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .contact-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(29, 53, 87, 0.7), rgba(29, 53, 87, 0.7)), url('images/hero_final.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .contact-wrapper {
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            padding: 3rem;
+        }
+
+        [data-theme='dark'] .glass-card {
+            background: rgba(27, 38, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-form-container {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+        }
+
+        .contact-info-card {
+            background: var(--secondary);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(45deg, var(--secondary), #2A4870);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4rem;
+            border: 1px solid var(--border);
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/road.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            filter: grayscale(1);
+        }
+
+        .map-marker {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .map-marker::after {
+            content: 'M';
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(-45deg) scale(1); }
+            50% { transform: rotate(-45deg) scale(1.1); }
+            100% { transform: rotate(-45deg) scale(1); }
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero { height: 40vh; }
+            .form-row { grid-template-columns: 1fr; }
+            .contact-wrapper { margin-top: -50px; }
+            .glass-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">M</div>
+            <span>MOTO</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <div class="container" style="z-index: 2;">
+            <span class="section-tag" style="color: var(--primary);">Contact Us</span>
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Get In Touch</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Have questions or ready to ride? We're here to help you every mile of the way.</p>
+        </div>
+    </header>
+
+    <main class="container contact-wrapper">
+        <div class="grid grid-2">
+            <!-- 1. Contact Form -->
+            <div class="contact-form-container">
+                <span class="section-tag">Direct Message</span>
+                <h2 style="margin-bottom: 2rem;">Send us a Message</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="What is this about?">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+
+            <!-- 2. Contact Details & Glass Card -->
+            <div class="glass-card" style="display: flex; flex-direction: column; gap: 2rem;">
+                <span class="section-tag" style="color: var(--primary);">Our Details</span>
+                <div class="contact-info-card">
+                    <h3>Address</h3>
+                    <p>123 Racing Lane, Motor City<br>MC 45678, United States</p>
+                </div>
+                <div class="contact-info-card">
+                    <h3>Phone & Working Hours</h3>
+                    <p>+1 (555) 010-9988<br>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="contact-info-card">
+                    <h3>Email Support</h3>
+                    <p>support@motoportale.com<br>sales@motoportale.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Map -->
+        <div class="map-section" style="margin-top: 5rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-tag">Location</span>
+                <h2>Visit Our Showroom</h2>
+            </div>
+            <div class="map-container" style="padding: 0; background: none; border: none; overflow: hidden; box-shadow: var(--shadow);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.604928373357!2d121.0375836!3d14.6200236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b777a875a6f3%3A0xe5498f8287ecc0d!2sQuezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1710640000000!5m2!1sen!2sph" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; filter: grayscale(0.5) contrast(1.2) invert(90%) hue-rotate(180deg);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); z-index: 10;">
+                    <h4 style="margin-bottom: 0.5rem; color: var(--primary); font-family: 'Orbitron', sans-serif;">MOTO HQ</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.8;">123 Racing Lane, Motor City<br>Open: Mon-Sat 9AM - 6PM</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.7rem;">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 1.5rem; color: white;">
+                    <div class="logo-icon" style="background-color: var(--primary);">M</div>
+                    <span>MOTO</span>
+                </div>
+                <p>The ultimate destination for motorcycle enthusiasts. Premium services, expert advice, and a community of riders who share your passion.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Stay Tuned</h3>
+                <p>Subscribe to our newsletter for the latest racing news and exclusive events.</p>
+                <div class="footer-newsletter">
+                    <form>
+                        <input type="email" placeholder="Your Rider Email" required>
+                        <button type="submit" class="btn btn-primary">Go</button>
+                    </form>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">FB</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">IG</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MotorCycle Portal. All rights reserved. Ride safe.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

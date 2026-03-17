@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorCycle Portal | Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">M</div>
+            <span>MOTO</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- H1 Hero Section - Centered -->
+    <header class="hero hero-centered" style="background-image: url('images/hero_final.png');">
+        <div class="hero-content">
+            <h1>Experience the Thrill</h1>
+            <p>Premium Motorcycles & Unmatched Services</p>
+            <div style="margin-top: 2rem;">
+                <a href="services.html" class="btn btn-primary" style="margin-right: 1rem;">Our Services</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Features -->
+    <section class="section container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Why Choose Us</h2>
+        <div class="grid grid-3">
+            <div class="card" style="text-align: center;">
+                <img src="images/bike2.png" alt="Collection" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3>Vast Collection</h3>
+                <p>Range of bikes from classic cruisers to high-speed sportbikes.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <img src="images/expert_care_v3.png" alt="Expert Care" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3>Expert Care</h3>
+                <p>Our mechanics are enthusiasts with years of specialized experience.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <img src="images/road.png" alt="Global Reach" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3>Global Reach</h3>
+                <p>Parts and support available across the country.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Image Callout (Service) -->
+    <section class="section" style="background-color: var(--bg-white);">
+        <div class="container grid grid-2" style="align-items: center;">
+            <div class="mobile-text-center">
+                <h2>Professional Maintenance</h2>
+                <p>Our workshop is equipped with the latest diagnostic tools to keep your ride in peak condition. From oil changes to full engine rebuilds, we handle it all.</p>
+                <a href="services.html" class="btn btn-primary" style="margin-top: 1.5rem;">Learn More</a>
+            </div>
+            <div>
+                <img src="images/service.png" alt="Workshop" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Accessories -->
+    <section class="section container">
+        <div class="grid grid-2 grid-stack-reverse" style="align-items: center;">
+            <div>
+                <img src="images/gear.png" alt="Motorcycle Gear" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
+            </div>
+            <div style="padding-left: 2rem;" class="mobile-text-center mobile-p-0">
+                <h2>Premium Gear</h2>
+                <p>Safety meets style. Explore our exclusive collection of helmets, jackets, and accessories designed for the modern rider.</p>
+                <a href="blog.html" class="btn btn-secondary" style="margin-top: 1.5rem;">View Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Our Fleet Callout -->
+    <section class="section" style="background-color: var(--bg-white);">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 2rem;">Explore Our Fleet</h2>
+            <p style="max-width: 800px; margin: 0 auto 3rem;">From urban commuters to cross-country tourers, we have the perfect machine for every journey. Each bike is meticulously inspected and maintained to our highest standards.</p>
+            <img src="images/fleet.png" alt="Motorcycle Fleet" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%; height: 500px; object-fit: cover; margin-bottom: 2rem;">
+            <a href="services.html" class="btn btn-primary">Check Availability</a>
+        </div>
+    </section>
+
+    <!-- Section 6: Testimonials -->
+    <section class="section container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Rider Voices</h2>
+        <div class="grid grid-3">
+            <div class="card" style="border-top: 4px solid var(--primary); text-align: center;">
+                <img src="images/rider1.png" alt="Mark S." style="display: block; margin: 0 auto 1.5rem; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary);">
+                <p style="font-style: italic; margin-bottom: 1.5rem;">"The team at MOTO handled my engine rebuild with incredible precision. My bike feels brand new again!"</p>
+                <strong>- Mark S.</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Kawasaki Ninja Rider</p>
+            </div>
+            <div class="card" style="border-top: 4px solid var(--primary); text-align: center;">
+                <img src="images/rider2.png" alt="Sarah L." style="display: block; margin: 0 auto 1.5rem; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary);">
+                <p style="font-style: italic; margin-bottom: 1.5rem;">"Found my dream cruiser here. The buying process was smooth, and the after-sales support is top-notch."</p>
+                <strong>- Sarah L.</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Harley Enthusiast</p>
+            </div>
+            <div class="card" style="border-top: 4px solid var(--primary); text-align: center;">
+                <img src="images/rider3.png" alt="David K." style="display: block; margin: 0 auto 1.5rem; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary);">
+                <p style="font-style: italic; margin-bottom: 1.5rem;">"Best service workshop in the city. They actually care about the riders and their safety."</p>
+                <strong>- David K.</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">BMX R1250 GS Rider</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Service Process -->
+    <section class="section" style="background-color: var(--secondary); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Our Service Process</h2>
+            <p style="margin-bottom: 4rem;">Professional care in four simple steps.</p>
+            <div class="grid grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary);">01</div>
+                    <h3 style="font-size: 1rem;">Book</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Schedule your slot online or via phone.</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary);">02</div>
+                    <h3 style="font-size: 1rem;">Diagnose</h3>
+                    <h3 style="font-size: 1rem;">Diagnose</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Full digital health check and report.</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary);">03</div>
+                    <h3 style="font-size: 1rem;">Fix</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Expert repairs using genuine parts.</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary);">04</div>
+                    <h3 style="font-size: 1rem;">Ride</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Certified safe for the open road.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Brand Trust -->
+    <section class="section container" style="text-align: center;">
+        <div style="display: flex; justify-content: space-around; align-items: center; filter: grayscale(1); opacity: 0.6; flex-wrap: wrap; gap: 2rem;">
+            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700;">DUCATI</div>
+            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700;">TRIUMPH</div>
+            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700;">KAWASAKI</div>
+            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700;">BMW.MOTO</div>
+            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700;">YAMAHA</div>
+        </div>
+    </section>
+
+    <!-- Section 9: Stats -->
+    <section class="section container" style="text-align: center; border-top: 1px solid var(--border);">
+        <div class="grid grid-3">
+            <div>
+                <h2 style="color: var(--primary);">500+</h2>
+                <p>Bikes Sold</p>
+            </div>
+            <div>
+                <h2 style="color: var(--primary);">2000+</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div>
+                <h2 style="color: var(--primary);">15+</h2>
+                <p>Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 1.5rem; color: white;">
+                    <div class="logo-icon" style="background-color: var(--primary);">M</div>
+                    <span>MOTO</span>
+                </div>
+                <p>The ultimate destination for motorcycle enthusiasts. Premium services, expert advice, and a community of riders who share your passion.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Stay Tuned</h3>
+                <p>Subscribe to our newsletter for the latest racing news and exclusive events.</p>
+                <div class="footer-newsletter">
+                    <form>
+                        <input type="email" placeholder="Your Rider Email" required>
+                        <button type="submit" class="btn btn-primary">Go</button>
+                    </form>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">FB</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">IG</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MotorCycle Portal. All rights reserved. Ride safe.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

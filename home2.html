@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorCycle Portal | Home 2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">M</div>
+            <span>MOTO</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html" class="active">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- H1 Hero Section - Split Layout -->
+    <header class="hero">
+        <div class="container grid grid-2" style="align-items: center;">
+            <div class="hero-content">
+                <h1 style="color: var(--primary);">Master the Machine</h1>
+                <p>Curated inventory and premium support for the discerning rider. Step into the world of elite motorcycling.</p>
+                <div style="margin-top: 2rem;">
+                    <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
+                    <a href="blog.html" class="btn btn-secondary" style="margin-left: 1rem;">Explore Blog</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.png" alt="Motorcycle" style="border-radius: 8px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Services Preview -->
+    <section class="section container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Premium Services</h2>
+        <div class="grid grid-3">
+            <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                <img src="images/service.png" alt="Precision Tuning" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3>Precision Tuning</h3>
+                    <p>Maximize performance with our state-of-the-art tuning services.</p>
+                </div>
+            </div>
+            <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                <img src="images/bike2.png" alt="Safety Inspections" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3>Safety Inspections</h3>
+                    <p>Comprehensive checks to ensure your safety on every ride.</p>
+                </div>
+            </div>
+            <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                <img src="images/gear.png" alt="Genuine Parts" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3>Genuine Parts</h3>
+                    <p>Only the best components for your beloved machine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Featured Machines -->
+    <section class="section" style="background-color: var(--bg-white);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Featured Machines</h2>
+            <div class="grid grid-3">
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <img src="images/bike2.png" alt="Sportbike" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Phantom ZX</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Unmatched speed and precision for the track.</p>
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">View Specs</a>
+                    </div>
+                </div>
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <img src="images/hero.png" alt="Cruiser" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Highway Star</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Comfort and style for the longest journeys.</p>
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">View Specs</a>
+                    </div>
+                </div>
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <img src="images/road.png" alt="Adventure" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Terra Rover</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Conquer any terrain with rugged reliability.</p>
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">View Specs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Club Benefits -->
+    <section class="section container">
+        <div class="grid grid-2" style="align-items: center;">
+            <div style="padding-right: 2rem;">
+                <h2 style="color: var(--primary);">Join the Elite Club</h2>
+                <p>Becoming a member of MOTO opens doors to a world of exclusive benefits and a community of like-minded enthusiasts.</p>
+                <ul style="margin-top: 2rem;">
+                    <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                        <span style="color: var(--primary); font-weight: 700;">01.</span>
+                        <div>
+                            <strong>Priority Servicing</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Skip the queue with guaranteed service slots within 24 hours.</p>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                        <span style="color: var(--primary); font-weight: 700;">02.</span>
+                        <div>
+                            <strong>Exclusive Events</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Invites to track days, coastal tours, and new model launches.</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; gap: 1rem;">
+                        <span style="color: var(--primary); font-weight: 700;">03.</span>
+                        <div>
+                            <strong>Partner Discounts</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Significant savings on gear, insurance, and performance parts.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/event.png" alt="Club Ride" style="border-radius: 8px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Adventure Callout -->
+    <section class="section hero-centered" style="background-image: url('images/road.png'); min-height: 40vh;">
+        <div class="hero-content">
+            <h2 style="font-size: 3rem;">Adventure Awaits</h2>
+            <p>Join the elite club of riders and conquer the world. The horizon is just the beginning.</p>
+            <a href="signup.html" class="btn btn-primary" style="margin-top: 2rem;">Join Today</a>
+        </div>
+    </section>
+
+    <!-- Section 6: Upcoming Events -->
+    <section class="section container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Upcoming Events</h2>
+        <div class="grid grid-2">
+            <div class="card" style="display: flex; gap: 1.5rem; align-items: center;">
+                <div style="background-color: var(--secondary); color: white; padding: 1rem; border-radius: 8px; text-align: center; min-width: 80px;">
+                    <div style="font-size: 1.5rem; font-weight: 700;">25</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase;">Mar</div>
+                </div>
+                <div>
+                    <h3>Coastal Cruise</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">A relaxed ride along the sun-drenched coast. Beginners welcome.</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex; gap: 1.5rem; align-items: center;">
+                <div style="background-color: var(--secondary); color: white; padding: 1rem; border-radius: 8px; text-align: center; min-width: 80px;">
+                    <div style="font-size: 1.5rem; font-weight: 700;">12</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase;">Apr</div>
+                </div>
+                <div>
+                    <h3>Track Day Blast</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Unleash your bike's full potential on the national circuit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Newsletter (Integrated into page) -->
+    <section class="section" style="background-color: var(--secondary); color: white;">
+        <div class="container" style="text-align: center;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2>Stay in the Loop</h2>
+                <p style="margin-bottom: 2rem;">Receive exclusive updates, technical tips, and event notifications directly.</p>
+                <form style="display: flex; gap: 1rem;">
+                    <input type="email" placeholder="Enter your email" style="flex: 1; padding: 1rem; border-radius: 4px; border: none;">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 1.5rem; color: white;">
+                    <div class="logo-icon" style="background-color: var(--primary);">M</div>
+                    <span>MOTO</span>
+                </div>
+                <p>The ultimate destination for motorcycle enthusiasts. Premium services, expert advice, and a community of riders who share your passion.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Stay Tuned</h3>
+                <p>Subscribe to our newsletter for the latest racing news and exclusive events.</p>
+                <div class="footer-newsletter">
+                    <form>
+                        <input type="email" placeholder="Your Rider Email" required>
+                        <button type="submit" class="btn btn-primary">Go</button>
+                    </form>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">FB</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">IG</a>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MotorCycle Portal. All rights reserved. Ride safe.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
