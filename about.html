@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOTO | About Us</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="index.css">
     <style>
         .about-hero {
-            background: linear-gradient(rgba(29, 53, 87, 0.7), rgba(29, 53, 87, 0.7)), url('images/about.png');
+            background: linear-gradient(rgba(29, 53, 87, 0.7), rgba(29, 53, 87, 0.7)), url('images/hero_adventure.png');
             background-size: cover;
             background-position: center;
             height: 400px;
@@ -48,9 +49,13 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
-            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+            <li class="mobile-only"><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li class="mobile-only"><button class="btn btn-primary theme-toggle" title="Toggle Theme"></button></li>
         </ul>
+        <div class="nav-actions desktop-only">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <button class="btn btn-primary theme-toggle" title="Toggle Theme"></button>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -75,7 +80,7 @@
                     <p style="margin-top: 1rem;">We believe a motorcycle isn't just a machine; it's an extension of the rider. That's why we treat every bike like our own and every client like family.</p>
                 </div>
                 <div>
-                    <img src="images/about.png" alt="Restored Motorcycle" style="border-radius: 8px; box-shadow: var(--shadow);">
+                    <img src="images/workshop_detail.png" alt="Restored Motorcycle" style="border-radius: 8px; box-shadow: var(--shadow);">
                 </div>
             </div>
         </section>

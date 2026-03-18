@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotorCycle Portal | Home</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -20,9 +21,13 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
-            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+            <li class="mobile-only"><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li class="mobile-only"><button class="btn btn-primary theme-toggle" title="Toggle Theme"></button></li>
         </ul>
+        <div class="nav-actions desktop-only">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <button class="btn btn-primary theme-toggle" title="Toggle Theme"></button>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -30,12 +35,12 @@
         </div>
     </nav>
 
-    <!-- H1 Hero Section - Centered -->
-    <header class="hero hero-centered" style="background-image: url('images/hero_final.png');">
-        <div class="hero-content">
-            <h1>Experience the Thrill</h1>
-            <p>Premium Motorcycles & Unmatched Services</p>
-            <div style="margin-top: 2rem;">
+    <!-- H1 Hero Section - Aligned -->
+    <header class="hero hero-overlay" style="background-image: url('images/hero_final.png');">
+        <div class="container hero-content">
+            <h1 style="max-width: 600px;">Experience the Thrill</h1>
+            <p style="max-width: 500px; font-size: 1.2rem; margin-bottom: 2rem;">Premium Motorcycles & Unmatched Services for the ultimate riding experience.</p>
+            <div>
                 <a href="services.html" class="btn btn-primary" style="margin-right: 1rem;">Our Services</a>
                 <a href="contact.html" class="btn btn-secondary">Contact Us</a>
             </div>
@@ -47,17 +52,17 @@
         <h2 style="text-align: center; margin-bottom: 3rem;">Why Choose Us</h2>
         <div class="grid grid-3">
             <div class="card" style="text-align: center;">
-                <img src="images/bike2.png" alt="Collection" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                <img src="images/bike2.png" alt="Collection" class="feature-card-img">
                 <h3>Vast Collection</h3>
                 <p>Range of bikes from classic cruisers to high-speed sportbikes.</p>
             </div>
             <div class="card" style="text-align: center;">
-                <img src="images/expert_care_v3.png" alt="Expert Care" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                <img src="images/expert_care_v3.png" alt="Expert Care" class="feature-card-img">
                 <h3>Expert Care</h3>
                 <p>Our mechanics are enthusiasts with years of specialized experience.</p>
             </div>
             <div class="card" style="text-align: center;">
-                <img src="images/road.png" alt="Global Reach" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                <img src="images/road.png" alt="Global Reach" class="feature-card-img">
                 <h3>Global Reach</h3>
                 <p>Parts and support available across the country.</p>
             </div>
@@ -73,7 +78,7 @@
                 <a href="services.html" class="btn btn-primary" style="margin-top: 1.5rem;">Learn More</a>
             </div>
             <div>
-                <img src="images/service.png" alt="Workshop" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
+                <img src="images/workshop_detail.png" alt="Workshop" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
             </div>
         </div>
     </section>
@@ -97,7 +102,7 @@
         <div class="container" style="text-align: center;">
             <h2 style="margin-bottom: 2rem;">Explore Our Fleet</h2>
             <p style="max-width: 800px; margin: 0 auto 3rem;">From urban commuters to cross-country tourers, we have the perfect machine for every journey. Each bike is meticulously inspected and maintained to our highest standards.</p>
-            <img src="images/fleet.png" alt="Motorcycle Fleet" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%; height: 500px; object-fit: cover; margin-bottom: 2rem;">
+            <img src="images/hero_adventure.png" alt="Motorcycle Fleet" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%; height: 500px; object-fit: cover; margin-bottom: 2rem;">
             <a href="services.html" class="btn btn-primary">Check Availability</a>
         </div>
     </section>
@@ -140,7 +145,6 @@
                 </div>
                 <div>
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary);">02</div>
-                    <h3 style="font-size: 1rem;">Diagnose</h3>
                     <h3 style="font-size: 1rem;">Diagnose</h3>
                     <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Full digital health check and report.</p>
                 </div>

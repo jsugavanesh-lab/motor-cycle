@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotorCycle Portal | Sign Up</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="index.css">
     <style>
         body, html {
@@ -15,24 +16,39 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url('images/road.png');
+            background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url('images/hero_adventure.png');
             background-size: cover;
             background-position: center;
-            padding: 2rem;
+            padding: 5rem 2rem 2rem;
             position: relative;
+        }
+        .theme-toggle-floating {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
         }
         .auth-card {
             background: var(--bg-white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
             text-align: center;
+            position: relative;
+        }
+        .logo-auth {
+            margin-bottom: 1.5rem;
+            justify-content: center;
         }
         .auth-card h1 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: var(--primary);
+            font-size: 1.8rem;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
         .form-grid {
             display: grid;
@@ -69,6 +85,64 @@
             color: var(--primary);
             font-weight: 600;
         }
+        .terms-row {
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            cursor: pointer;
+            text-align: left;
+        }
+        .terms-row a {
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .terms-row a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+        .social-auth {
+            margin-top: 2.5rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+        .social-auth p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .social-icons-auth {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .social-icon-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+        .social-icon-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
+        }
         .back-home {
             position: absolute;
             top: 2rem;
@@ -78,6 +152,11 @@
             text-transform: uppercase;
             font-family: 'Orbitron', sans-serif;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            transition: all 0.3s;
+        }
+        .back-home:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
         }
         @media (max-width: 480px) {
             .form-grid {
@@ -93,8 +172,16 @@
     <a href="index.html" class="back-home">&larr; Back to Home</a>
 
     
+    <div class="theme-toggle-floating">
+        <button class="btn btn-primary theme-toggle" title="Toggle Theme" style="padding: 0.8rem; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;"></button>
+    </div>
+
     <div class="auth-container">
         <div class="auth-card">
+            <div class="logo logo-auth">
+                <div class="logo-icon">M</div>
+                <span>MOTO</span>
+            </div>
             <h1>Join the Club</h1>
             <form>
                 <div class="form-grid">
@@ -118,9 +205,24 @@
                         <label for="confirm">Confirm</label>
                         <input type="password" id="confirm" placeholder="••••••••" required>
                     </div>
+                    
+                    <label class="terms-row">
+                        <input type="checkbox" required>
+                        <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></span>
+                    </label>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Create Account</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem;">Create Account</button>
             </form>
+
+            <div class="social-auth">
+                <p>Register with</p>
+                <div class="social-icons-auth">
+                    <div class="social-icon-btn" title="Facebook">FB</div>
+                    <div class="social-icon-btn" title="Instagram">IG</div>
+                    <div class="social-icon-btn" title="Twitter">TW</div>
+                </div>
+            </div>
+
             <div class="auth-footer">
                 <p>Already a member? <a href="login.html">Sign In</a></p>
             </div>

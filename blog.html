@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotorCycle Portal | Blog</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="index.css">
     <style>
         .blog-layout {
@@ -108,6 +109,10 @@
         @media (max-width: 992px) {
             .blog-layout {
                 grid-template-columns: 1fr;
+                margin-top: 4rem; /* Increased to prevent overlap with navbar */
+            }
+            .blog-posts {
+                grid-template-columns: 1fr;
             }
             .sidebar {
                 order: -1; /* Place sidebar above blog posts on mobile/tablet */
@@ -129,9 +134,13 @@
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
-            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+            <li class="mobile-only"><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li class="mobile-only"><button class="btn btn-primary theme-toggle" title="Toggle Theme"></button></li>
         </ul>
+        <div class="nav-actions desktop-only">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <button class="btn btn-primary theme-toggle" title="Toggle Theme"></button>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -208,7 +217,7 @@
         <!-- Blog Posts -->
         <div class="blog-posts">
             <article class="blog-post">
-                <img src="images/road.png" alt="Road Trip">
+                <img src="images/blog_mountain_pass.png" alt="Road Trip">
                 <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 15, 2026 | Adventure</div>
                 <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Mountain Pass Guide</h2>
                 <p style="font-size: 0.9rem; flex-grow: 1;">Explore the best high-altitude passes and how to prepare your bike for the climb...</p>
@@ -224,7 +233,7 @@
             </article>
 
             <article class="blog-post">
-                <img src="images/gear.png" alt="Motorcycle Gear">
+                <img src="images/blog_helmet_tech.png" alt="Motorcycle Gear">
                 <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 10, 2026 | Reviews</div>
                 <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Helmet Materials</h2>
                 <p style="font-size: 0.9rem; flex-grow: 1;">Carbon Fiber vs. Polycarbonate: deep dive into safety ratings for your next lid...</p>
@@ -232,7 +241,7 @@
             </article>
 
             <article class="blog-post">
-                <img src="images/hero.png" alt="New Cruisers">
+                <img src="images/blog_cruiser_review.png" alt="New Cruisers">
                 <div class="blog-meta" style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem;">March 5, 2026 | Reviews</div>
                 <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Best 2026 Cruisers</h2>
                 <p style="font-size: 0.9rem; flex-grow: 1;">Comfort meets style in our latest roundup of the top cruisers hitting the market...</p>

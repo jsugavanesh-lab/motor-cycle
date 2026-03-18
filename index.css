@@ -23,6 +23,14 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
+[data-theme='dark'] .team-section {
+    background-color: var(--bg-light);
+}
+
+[data-theme='dark'] .team-title {
+    color: var(--text-dark);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -99,9 +107,38 @@ img {
     transform: translateY(-2px);
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+[data-theme='dark'] .theme-toggle {
+    background-color: var(--accent);
+    color: var(--text-dark);
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
 /* Layout Utilities */
 .section {
-    padding: 5rem 0;
+    padding: 6rem 0; /* Increased from 5rem for better breathing room */
+    position: relative;
+    clear: both;
 }
 
 .grid {
@@ -115,8 +152,9 @@ img {
 
 /* Tablet Breakpoint (e.g. iPad Pro/Landscape) */
 @media (max-width: 1024px) {
-    .grid-3 {
+    .grid-3, .grid-4 {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
     .section {
         padding: 4rem 0;
@@ -131,8 +169,8 @@ img {
 
 @media (max-width: 768px) {
     .grid-2, .grid-3, .grid-4 {
-        grid-template-columns: 1fr;
-        gap: 1.5rem; /* Tighter gap on mobile */
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important; /* Increased gap to prevent proximity issues */
     }
     .grid-stack-reverse {
         display: flex;
@@ -155,6 +193,23 @@ img {
     }
 }
 
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .tablet-text-center {
         text-align: center !important;
@@ -173,6 +228,18 @@ img {
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow);
+}
+
+.navbar .logo {
+    flex: 1;
+}
+
+.nav-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* Logo */
@@ -213,13 +280,30 @@ img {
 }
 
 .nav-links {
+    flex: 2;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
     color: var(--primary);
+}
+
+.nav-links a.active {
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
 }
 
 .hamburger {
@@ -249,9 +333,18 @@ img {
         gap: 2rem;
         transition: var(--transition);
         border-top: 1px solid var(--border);
-        align-items: flex-start;
+        align-items: center;
         display: flex;
         overflow-y: auto;
+    }
+    
+    .nav-actions {
+        display: none;
+    }
+    
+    .nav-links .btn {
+        width: 100%;
+        display: block;
     }
     .nav-links.active {
         left: 0;
@@ -278,11 +371,33 @@ img {
     position: relative;
     overflow: hidden;
     background-color: var(--bg-white);
+    padding: 4rem 0; /* Base padding to ensure content doesn't hit edges */
 }
 
 .hero-content {
     flex: 1;
     z-index: 2;
+}
+
+.hero-content p {
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95; /* Increased from default for better contrast */
+}
+
+.hero-dark {
+    background-color: var(--secondary) !important;
+    color: white !important;
+}
+
+.hero-dark .hero-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-dark h1 {
+    color: white !important;
 }
 
 .hero-image {
@@ -305,6 +420,24 @@ img {
     color: white;
 }
 
+.hero-overlay {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
+}
+
 .hero-centered::after {
     content: '';
     position: absolute;
@@ -322,24 +455,29 @@ img {
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 60vh;
+        min-height: 80vh; /* Increased back to 80vh for mobile to give more room for stacked content */
         text-align: center;
+        padding: 6rem 0; /* Added vertical padding for stacked content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .hero .grid-2 {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 4rem; /* Increased gap between content and image */
     }
     .hero-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 1rem;
     }
-    .hero h1 {
-        font-size: 2rem;
+    .hero-content h1 {
+        margin-bottom: 2rem !important;
     }
-    .hero p {
-        font-size: 1rem;
+    .hero-content p {
+        margin-bottom: 2.5rem !important;
     }
 }
 
@@ -354,6 +492,16 @@ img {
 
 .card:hover {
     transform: translateY(-5px);
+}
+
+.feature-card-img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 /* Footer */
@@ -510,14 +658,14 @@ img {
 .team-card h4 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    color: var(--secondary);
+    color: var(--text-dark);
     font-family: 'Inter', sans-serif; /* Cleaner for names */
     text-transform: none;
     font-weight: 700;
 }
 
 .team-card p {
-    color: #457B9D;
+    color: var(--text-muted);
     font-size: 0.9rem;
     font-weight: 500;
 }

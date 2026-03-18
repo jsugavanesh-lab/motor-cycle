@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotorCycle Portal | Services</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -20,9 +21,13 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
-            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+            <li class="mobile-only"><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li class="mobile-only"><button class="btn btn-primary theme-toggle" title="Toggle Theme"></button></li>
         </ul>
+        <div class="nav-actions desktop-only">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <button class="btn btn-primary theme-toggle" title="Toggle Theme"></button>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -41,7 +46,7 @@
         <!-- Service 1: Maintenance -->
         <section class="section grid grid-2" style="align-items: center;">
             <div class="hero-image">
-                <img src="images/service.png" alt="Maintenance" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
+                <img src="images/workshop_detail.png" alt="Maintenance" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
             </div>
             <div class="mobile-text-center">
                 <h2 style="color: var(--primary);">Regular Maintenance</h2>
@@ -68,14 +73,14 @@
                 </ul>
             </div>
             <div class="hero-image">
-                <img src="images/hero.png" alt="Diagnostics" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
+                <img src="images/engine_rebuild.png" alt="Diagnostics" style="border-radius: 8px; box-shadow: var(--shadow); width: 100%;">
             </div>
         </section>
 
         <!-- Service 3: Customization -->
         <section class="section grid grid-2" style="align-items: center; border-top: 1px solid var(--border);">
             <div class="hero-image">
-                <img src="images/bike2.png" alt="Precision Tuning" style="border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="images/custom_tuning.png" alt="Precision Tuning" style="border-radius: 8px; box-shadow: var(--shadow);">
             </div>
             <div>
                 <h2 style="color: var(--primary);">Precision Tuning</h2>
@@ -90,14 +95,14 @@
                 <p>Comprehensive checks to ensure your safety on every ride. We leave no bolt unturned in our quest for your protection.</p>
             </div>
             <div class="hero-image">
-                <img src="images/service.png" alt="Safety Inspections" style="border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="images/safety_check.png" alt="Safety Inspections" style="border-radius: 8px; box-shadow: var(--shadow);">
             </div>
         </section>
 
         <!-- Service 5: Parts -->
         <section class="section grid grid-2" style="align-items: center; border-top: 1px solid var(--border);">
             <div class="hero-image">
-                <img src="images/gear.png" alt="Genuine Parts" style="border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="images/genuine_parts.png" alt="Genuine Parts" style="border-radius: 8px; box-shadow: var(--shadow);">
             </div>
             <div>
                 <h2 style="color: var(--primary);">Genuine Parts</h2>

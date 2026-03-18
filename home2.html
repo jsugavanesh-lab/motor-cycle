@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotorCycle Portal | Home 2</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -20,9 +21,13 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
-            <li><button id="theme-toggle" class="btn btn-primary">Theme</button></li>
+            <li class="mobile-only"><a href="login.html" class="btn btn-secondary">Login</a></li>
+            <li class="mobile-only"><button class="btn btn-primary theme-toggle" title="Toggle Theme"></button></li>
         </ul>
+        <div class="nav-actions desktop-only">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <button class="btn btn-primary theme-toggle" title="Toggle Theme"></button>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -31,11 +36,11 @@
     </nav>
 
     <!-- H1 Hero Section - Split Layout -->
-    <header class="hero">
+    <header class="hero hero-dark">
         <div class="container grid grid-2" style="align-items: center;">
             <div class="hero-content">
-                <h1 style="color: var(--primary);">Master the Machine</h1>
-                <p>Curated inventory and premium support for the discerning rider. Step into the world of elite motorcycling.</p>
+                <h1 style="color: var(--primary); margin-bottom: 1rem;">Master the Machine</h1>
+                <p style="max-width: 500px;">Curated inventory and premium support for the discerning rider. Step into the world of elite motorcycling.</p>
                 <div style="margin-top: 2rem;">
                     <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
                     <a href="blog.html" class="btn btn-secondary" style="margin-left: 1rem;">Explore Blog</a>
@@ -52,7 +57,7 @@
         <h2 style="text-align: center; margin-bottom: 3rem;">Premium Services</h2>
         <div class="grid grid-3">
             <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
-                <img src="images/service.png" alt="Precision Tuning" style="width: 100%; height: 180px; object-fit: cover;">
+                <img src="images/workshop_detail.png" alt="Precision Tuning" style="width: 100%; height: 180px; object-fit: cover;">
                 <div style="padding: 1.5rem;">
                     <h3>Precision Tuning</h3>
                     <p>Maximize performance with our state-of-the-art tuning services.</p>
@@ -97,7 +102,7 @@
                     </div>
                 </div>
                 <div class="card" style="padding: 0; overflow: hidden;">
-                    <img src="images/road.png" alt="Adventure" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="images/hero_adventure.png" alt="Adventure" style="width: 100%; height: 200px; object-fit: cover;">
                     <div style="padding: 1.5rem;">
                         <h3>Terra Rover</h3>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Conquer any terrain with rugged reliability.</p>
@@ -145,7 +150,7 @@
     </section>
 
     <!-- Section 5: Adventure Callout -->
-    <section class="section hero-centered" style="background-image: url('images/road.png'); min-height: 40vh;">
+    <section class="section hero-centered" style="background-image: url('images/hero_adventure.png'); min-height: 40vh;">
         <div class="hero-content">
             <h2 style="font-size: 3rem;">Adventure Awaits</h2>
             <p>Join the elite club of riders and conquer the world. The horizon is just the beginning.</p>
@@ -180,15 +185,15 @@
         </div>
     </section>
 
-    <!-- Section 7: Newsletter (Integrated into page) -->
-    <section class="section" style="background-color: var(--secondary); color: white;">
+    <!-- Section 7: Newsletter (Differentiated from Footer) -->
+    <section class="section" style="background: linear-gradient(135deg, var(--secondary) 0%, #0d1b2a 100%); color: white; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 6rem 0;">
         <div class="container" style="text-align: center;">
-            <div style="max-width: 600px; margin: 0 auto;">
-                <h2>Stay in the Loop</h2>
-                <p style="margin-bottom: 2rem;">Receive exclusive updates, technical tips, and event notifications directly.</p>
-                <form style="display: flex; gap: 1rem;">
-                    <input type="email" placeholder="Enter your email" style="flex: 1; padding: 1rem; border-radius: 4px; border: none;">
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
+            <div style="max-width: 650px; margin: 0 auto; background: rgba(255,255,255,0.03); padding: 4rem 3rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                <h2 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: var(--primary); margin-bottom: 1rem;">STAY IN THE LOOP</h2>
+                <p style="margin-bottom: 2.5rem; opacity: 0.8; font-size: 1.1rem;">Receive exclusive updates, technical tips, and event notifications directly.</p>
+                <form style="display: flex; gap: 0; background: white; padding: 0.4rem; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                    <input type="email" placeholder="Enter your rider email" style="flex: 1; padding: 1rem 1.5rem; border: none; outline: none; background: transparent; color: var(--secondary); font-size: 1rem;">
+                    <button type="submit" class="btn btn-primary" style="padding: 1rem 2.5rem; border-radius: 6px;">Subscribe</button>
                 </form>
             </div>
         </div>
