@@ -7,6 +7,7 @@
     --accent: #A8DADC;
     --bg-light: #F1FAEE;
     --bg-white: #FFFFFF;
+    --bg-soft: #F8F9FA;
     --text-dark: #1D3557;
     --text-muted: #457B9D;
     --border: #A8DADC;
@@ -17,10 +18,16 @@
 [data-theme='dark'] {
     --bg-light: #0D1B2A;
     --bg-white: #1B263B;
+    --bg-soft: #242E4A;
     --text-dark: #E0E1DD;
     --text-muted: #778DA9;
     --border: #415A77;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .btn-secondary {
+    background-color: var(--border);
+    color: var(--bg-light);
 }
 
 [data-theme='dark'] .team-section {
@@ -471,6 +478,10 @@ img {
     z-index: 1;
 }
 
+.hero-overlay .hero-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
 .hero-centered::after {
     content: '';
     position: absolute;
@@ -480,6 +491,18 @@ img {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+.hero-overlay .hero-content h1,
+.hero-overlay .hero-content p,
+.hero-centered .hero-content h1,
+.hero-centered .hero-content p {
+    color: white !important;
+}
+
+.hero-overlay .hero-content p,
+.hero-centered .hero-content p {
+    opacity: 1 !important;
 }
 
 .hero-centered .hero-content {
